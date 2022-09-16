@@ -7,6 +7,9 @@
         <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/layout/activity_reporte.xml" value="0.25" />
         <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/menu/menu.xml" value="0.67" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.15" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_plus.xml" value="0.15" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_trim.xml" value="0.15" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_reporte.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado.xml" value="0.36666666666666664" />
@@ -22,5 +25,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.36666666666666664" />
+      </ProjectState>
+    </option>
   </component>
 </project>

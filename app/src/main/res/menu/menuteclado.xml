@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/poptecla"
-        android:title="xd"
+        android:icon="@drawable/ic_trim"
         android:onClick="btnMenu"
         app:showAsAction="ifRoom" />
 </menu>
