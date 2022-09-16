@@ -21,34 +21,10 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_monitor"
-        android:layout_width="219dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:onClick="irMonitor"
-        android:text="Monitor"
-        app:layout_constraintEnd_toEndOf="@+id/btn_mouse"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_mouse"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mouse" />
-
-    <Button
-        android:id="@+id/btn_computadora"
-        android:layout_width="219dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="124dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Computadora"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/btn_teclado"
         android:layout_width="219dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:onClick="irTeclado"
         android:text="Teclado"
         app:layout_constraintEnd_toEndOf="@+id/btn_computadora"
@@ -57,12 +33,24 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_computadora" />
 
     <Button
-        android:id="@+id/btn_mouse"
+        android:id="@+id/btn_computadora"
         android:layout_width="219dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:onClick="irMouse"
-        android:text="Mouse"
+        android:layout_marginTop="164dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Computadora"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_monitor"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:onClick="irMonitor"
+        android:text="Monitor"
         app:layout_constraintEnd_toEndOf="@+id/btn_teclado"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_teclado"
