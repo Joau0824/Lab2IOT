@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_reporte"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="108dp"
+        android:text="Reporte"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_monitor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_monitor"
+        app:layout_constraintTop_toBottomOf="@+id/btn_monitor"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,6 +26,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <Button
+        android:id="@+id/btn_monitor"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Monitor"
+        app:layout_constraintEnd_toEndOf="@+id/btn_mouse"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_mouse"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mouse" />
+
+    <Button
+        android:id="@+id/btn_computadora"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="124dp"
+        android:background="#94BA68"
+        android:backgroundTint="#94BA68"
+        android:text="Computadora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_teclado"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Teclado"
+        app:layout_constraintEnd_toEndOf="@+id/btn_computadora"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/btn_computadora" />
+
+    <Button
+        android:id="@+id/btn_mouse"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Mouse"
+        app:layout_constraintEnd_toEndOf="@+id/btn_teclado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_teclado"
+        app:layout_constraintTop_toBottomOf="@+id/btn_teclado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
