@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Labtel/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Labtel/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado_actualizar.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Labtel/Downloads/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.33242753623188404" />
-        <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.375" />
       </map>
     </option>
   </component>
