@@ -4,5 +4,6 @@
     <item
         android:id="@+id/poptecla"
         android:title="xd"
+        android:onClick="btnMenu"
         app:showAsAction="ifRoom" />
 </menu>

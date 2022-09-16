@@ -14,25 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.btn_computadora);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ComputadoraActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public void irTeclado(View view){
         Intent intent = new Intent(this, TecladoActivity.class);
-        startActivity( intent );
+        startActivity(intent);
     }
 
-    public void irMouse(View view){
+    /*public void irMouse(View view){
         Intent intent = new Intent(this, MouseActivity.class);
         startActivity( intent );
-    }
+    }*/
 
     public void irMonitor(View view){
         Intent intent = new Intent(this, MonitorActivity.class);
