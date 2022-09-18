@@ -6,11 +6,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titulo_teclado_agregar"
+        android:id="@+id/titulo_monitor_agregar"
         android:layout_width="125dp"
         android:layout_height="45dp"
         android:layout_marginTop="56dp"
-        android:text="Teclado"
+        android:text="@string/titulo_monitor"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,15 +19,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/activo_teclado"
+        android:id="@+id/activo_monitor"
         android:layout_width="325dp"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:hint="Activo"
-        app:layout_constraintEnd_toEndOf="@+id/titulo_teclado_agregar"
+        app:layout_constraintEnd_toEndOf="@+id/titulo_monitor_agregar"
         app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="@+id/titulo_teclado_agregar"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_teclado_agregar" />
+        app:layout_constraintStart_toStartOf="@+id/titulo_monitor_agregar"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_monitor_agregar" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/activo_pc"
@@ -35,13 +35,13 @@
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:hint="PC Activo"
-        app:layout_constraintEnd_toEndOf="@+id/activo_teclado"
+        app:layout_constraintEnd_toEndOf="@+id/activo_monitor"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/activo_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/activo_teclado" />
+        app:layout_constraintStart_toStartOf="@+id/activo_monitor"
+        app:layout_constraintTop_toBottomOf="@+id/activo_monitor" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/marca_teclado"
+        android:id="@+id/marca_monitor"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
@@ -52,35 +52,35 @@
         app:layout_constraintTop_toBottomOf="@+id/activo_pc" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/idioma_teclado"
+        android:id="@+id/idioma_monitor"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:hint="Idioma"
-        app:layout_constraintEnd_toEndOf="@+id/marca_teclado"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/marca_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/marca_teclado" />
+        android:hint="Pulgadas"
+        app:layout_constraintEnd_toEndOf="@+id/marca_monitor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/marca_monitor"
+        app:layout_constraintTop_toBottomOf="@+id/marca_monitor" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/anio_teclado"
+        android:id="@+id/anio_monitor"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:hint="Año"
-        app:layout_constraintEnd_toEndOf="@+id/idioma_teclado"
+        app:layout_constraintEnd_toEndOf="@+id/idioma_monitor"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/idioma_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/idioma_teclado" />
+        app:layout_constraintStart_toStartOf="@+id/idioma_monitor"
+        app:layout_constraintTop_toBottomOf="@+id/idioma_monitor" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/modelo_teclado"
+        android:id="@+id/modelo_monitor"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:hint="Modelo"
-        app:layout_constraintEnd_toEndOf="@+id/anio_teclado"
+        app:layout_constraintEnd_toEndOf="@+id/anio_monitor"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/anio_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/anio_teclado" />
+        app:layout_constraintStart_toStartOf="@+id/anio_monitor"
+        app:layout_constraintTop_toBottomOf="@+id/anio_monitor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titulo_computadora_agregar"
+        android:layout_width="230dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:text="Computadora"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/activo_computadora"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="72dp"
+        android:hint="Activo"
+        app:layout_constraintEnd_toEndOf="@+id/titulo_computadora_agregar"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="@+id/titulo_computadora_agregar"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_computadora_agregar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/marca_computadora"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="Marca"
+        app:layout_constraintEnd_toEndOf="@+id/activo_computadora"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/activo_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/activo_computadora" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/anio_computadora"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="Año"
+        app:layout_constraintEnd_toEndOf="@+id/marca_computadora"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/marca_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/marca_computadora" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/modelo_computadora"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="CPU"
+        app:layout_constraintEnd_toEndOf="@+id/anio_computadora"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/anio_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/anio_computadora" />
+</androidx.constraintlayout.widget.ConstraintLayout>
