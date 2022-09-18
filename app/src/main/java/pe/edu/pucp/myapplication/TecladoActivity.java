@@ -1,5 +1,6 @@
 package pe.edu.pucp.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +11,8 @@ import android.widget.PopupMenu;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class TecladoActivity extends AppCompatActivity {
 
     @Override
@@ -17,6 +20,13 @@ public class TecladoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teclado);
         this.setTitle(R.string.titulo_teclado);
+
+        //boton flotante de agregar
+        FloatingActionButton floatingActionButton=findViewById(R.id.plus_teclado);
+        floatingActionButton.setOnClickListener(view -> {
+            Intent intent = new Intent(this,AgregarTecladoActivity.class);
+            startActivity(intent);
+        });
 
     }
     @Override
