@@ -16,6 +16,7 @@ public class MonitorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitor);
+        this.setTitle(R.string.titulo_monitor);
     }
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu){

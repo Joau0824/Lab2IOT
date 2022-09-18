@@ -21,6 +21,7 @@ public class ComputadoraActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu){
         getMenuInflater().inflate(R.menu.menucomputadora,menu);
+        this.setTitle(R.string.titulo_compu);
         return true;
     }
 

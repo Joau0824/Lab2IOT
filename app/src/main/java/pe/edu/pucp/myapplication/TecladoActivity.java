@@ -16,6 +16,7 @@ public class TecladoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teclado);
+        this.setTitle(R.string.titulo_teclado);
 
     }
     @Override
