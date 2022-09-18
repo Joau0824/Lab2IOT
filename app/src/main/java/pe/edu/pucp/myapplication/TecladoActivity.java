@@ -27,17 +27,17 @@ public class TecladoActivity extends AppCompatActivity {
 
 
 
-    public void btnMenu(MenuItem menuItem){
+    public void btnMenu_teclado(MenuItem menuItem){
         Log.d("msg","tres puntos v");
         View view = findViewById(R.id.poptecla);
         PopupMenu popupMenu = new PopupMenu(this,view);
         popupMenu.getMenuInflater().inflate(R.menu.poptecla,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(menuItem1 -> {
             switch (menuItem.getItemId()){
-                case R.id.pop1:
+                case R.id.pop_buscar_tecla:
                     Log.d("msg","Buscar");
                     return true;
-                case R.id.pop2:
+                case R.id.pop_todo_tecla:
                     Log.d("msg","Todo");
                     return true;
                 default:

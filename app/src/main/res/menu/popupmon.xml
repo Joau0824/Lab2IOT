@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/pop_buscar_tecla"
+        android:id="@+id/pop_buscar_mon"
         android:title="Buscar" />
     <item
-        android:id="@+id/pop_todo_tecla"
+        android:id="@+id/pop_todo_mon"
         android:title="Todo" />
 </menu>

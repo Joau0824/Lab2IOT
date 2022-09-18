@@ -4,6 +4,6 @@
     <item
         android:id="@+id/poptecla"
         android:icon="@drawable/ic_trim"
-        android:onClick="btnMenu"
+        android:onClick="btnMenu_teclado"
         app:showAsAction="ifRoom" />
 </menu>

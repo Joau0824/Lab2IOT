@@ -28,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void irMonitor(View view){
         Intent intent = new Intent(this, MonitorActivity.class);
-        startActivity( intent );
+        startActivity(intent);
+    }
+    public void irComputadora(View view){
+        Intent intent = new Intent(this, MonitorActivity.class);
+        startActivity(intent);
     }
 
     public void irReporte(View view){
         Intent intent = new Intent(this, ReporteActivity.class);
-        startActivity( intent );
+        startActivity(intent);
     }
 }

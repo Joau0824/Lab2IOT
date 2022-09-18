@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:id="@+id/pop_buscar_tecla"
-        android:title="Buscar" />
-    <item
-        android:id="@+id/pop_todo_tecla"
-        android:title="Todo" />
+        android:id="@+id/popcompu"
+        android:icon="@drawable/ic_trim"
+        android:onClick="btnMenu_computadora"
+        app:showAsAction="ifRoom" />
 </menu>

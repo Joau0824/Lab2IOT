@@ -3,9 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/pop_buscar_tecla"
-        android:title="Buscar" />
-    <item
-        android:id="@+id/pop_todo_tecla"
-        android:title="Todo" />
+        android:id="@+id/popmon"
+        android:icon="@drawable/ic_trim"
+        android:onClick="btnMenu_monitor"
+        app:showAsAction="ifRoom" />
 </menu>
