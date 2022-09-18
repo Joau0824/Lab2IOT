@@ -26,8 +26,6 @@ public class ComputadoraActivity extends AppCompatActivity {
     }
 
 
-
-
     public void btnMenu_computadora(MenuItem menuItem){
         Log.d("msg","tres puntos v");
         View view = findViewById(R.id.popcompu);

@@ -10,11 +10,14 @@
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.15" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_plus.xml" value="0.15" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/drawable-anydpi/ic_trim.xml" value="0.15" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_computadora.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_monitor.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_reporte.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado_actualizar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menucomputadora.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menuteclado.xml" value="0.5" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/poptecla.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/activity_lista_teclados.xml" value="0.21262458471760798" />
