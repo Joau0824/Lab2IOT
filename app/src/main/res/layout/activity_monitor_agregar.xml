@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/titulo_monitor_agregar"
@@ -38,8 +38,7 @@
         app:layout_constraintEnd_toEndOf="@+id/activo_monitor"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activo_monitor"
-        app:layout_constraintTop_toBottomOf="@+id/activo_monitor" >
-    </Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/activo_monitor"></Spinner>
 
     <Spinner
         android:id="@+id/marca_monitor"
@@ -50,8 +49,7 @@
         app:layout_constraintEnd_toEndOf="@+id/activo_pc_monitor"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activo_pc_monitor"
-        app:layout_constraintTop_toBottomOf="@+id/activo_pc_monitor" >
-    </Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/activo_pc_monitor"></Spinner>
 
     <Spinner
         android:id="@+id/pulgadas_monitor"
@@ -62,8 +60,7 @@
         app:layout_constraintEnd_toEndOf="@+id/marca_monitor"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/marca_monitor"
-        app:layout_constraintTop_toBottomOf="@+id/marca_monitor" >
-    </Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/marca_monitor"></Spinner>
 
     <EditText
         android:id="@+id/anio_monitor"

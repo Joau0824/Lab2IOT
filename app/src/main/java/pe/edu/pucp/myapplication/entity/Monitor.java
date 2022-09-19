@@ -4,6 +4,15 @@ import java.io.Serializable;
 
 public class Monitor implements Serializable {
 
+    public Monitor(String activo, String activoPC, String marca, Integer ano, Integer pulgadas, String modelo) {
+        this.activo = activo;
+        this.pcActivo = pcActivo;
+        this.marca = marca;
+        this.ano = ano;
+        this.pulgadas = pulgadas;
+        this.modelo = modelo;
+    }
+
     public String getActivo() {
         return activo;
     }
@@ -20,11 +29,11 @@ public class Monitor implements Serializable {
         this.pcActivo = pcActivo;
     }
 
-    public int getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(int marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -54,11 +63,9 @@ public class Monitor implements Serializable {
 
     private String activo;
     private int  pcActivo;
-    private int marca;
+    private String marca;
     private int pulgadas;
     private int ano;
     private String modelo;
-
-
 
 }

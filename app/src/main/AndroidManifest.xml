@@ -58,6 +58,12 @@
             android:parentActivityName=".ComputadoraActivity">
 
         </activity>
+        <!--<activity
+            android:name=".AgregarMonitorActivity"
+            android:exported="true"
+            android:parentActivityName=".MonitorActivity">
+
+        </activity>-->
     </application>
 
 </manifest>
