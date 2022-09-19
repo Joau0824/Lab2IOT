@@ -59,7 +59,7 @@ public class ListaMonitor {
                 return i;
             }
         }
-        return new Monitor("ERROR","0","0","0",0, "No");
+        return new Monitor("ERROR","0","0",0,0, "No");
     }
 
     public static ArrayList<String> searchMonitor(String activo){
@@ -69,9 +69,9 @@ public class ListaMonitor {
             if(i.getActivo().equalsIgnoreCase(activo)){
                 desc="";
                 desc+="Activo: "+i.getActivo()+"\n";
-                desc+="PC: "+ i.getPc()+"\n";
+                desc+="PC: "+ i.getPcActivo()+"\n";
                 desc+="Marca: "+marcaValue(Integer.parseInt(i.getMarca()))+"\n";
-                desc+="Pulgadas: "+pulgadasValue(Integer.parseInt(i.getPulgada()))+"\n";
+                desc+="Pulgadas: "+pulgadasValue(i.getPulgadas())+"\n";
                 desc+="Año: "+i.getAno()+"\n";
                 desc+="Modelo: "+i.getModelo()+"\n";
                 ret.add(desc);
@@ -87,9 +87,9 @@ public class ListaMonitor {
         for(Monitor i : listaMonitor){
             desc="";
             desc+="Activo: "+i.getActivo()+"\n";
-            desc+="PC: "+ i.getPc()+"\n";
+            desc+="PC: "+ i.getPcActivo()+"\n";
             desc+="Marca: "+marcaValue(Integer.parseInt(i.getMarca()))+"\n";
-            desc+="Pulgadas: "+pulgadasValue(Integer.parseInt(i.getPulgada()))+"\n";
+            desc+="Pulgadas: "+pulgadasValue(i.getPulgadas())+"\n";
             desc+="Año: "+i.getAno()+"\n";
             desc+="Modelo: "+i.getModelo()+"\n";
             lista.add(desc);
@@ -102,22 +102,18 @@ public class ListaMonitor {
         for(Monitor i : listaMonitor){
             if(i.getActivo().equalsIgnoreCase(activo)){
                 i.setActivo(monitor.getActivo());
-                i.setPc(monitor.getPc());
+                i.setPcActivo(monitor.getPcActivo());
                 i.setAno(monitor.getAno());
                 i.setModelo(monitor.getModelo());
-                i.setPulgada(monitor.getPulgada());
+                i.setPulgadas(monitor.getPulgadas());
                 i.setMarca(monitor.getMarca());
                 break;
             }
         }
     }
-    public static void deleteMonitor(String active){
-        for(int i=0; i<listaMonitor.size() ; i++){
-            if(listaMonitor.get(i).getPc().equalsIgnoreCase(active)){
-                listaMonitor.remove(i);
-                break;
-            }
-        }
+
+    public static void eliminarMonitor(Monitor monitor){
+        listaMonitor.remove(monitor);
     }
 
 }
