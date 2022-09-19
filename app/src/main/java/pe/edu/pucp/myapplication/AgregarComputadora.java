@@ -41,6 +41,7 @@ public class AgregarComputadora extends AppCompatActivity {
     }
 
     //VINCULAMOS EL MENU CON EL ACTIVITY
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_check_computadora,menu);
@@ -48,7 +49,7 @@ public class AgregarComputadora extends AppCompatActivity {
     }
 
     //Guardar new computer
-    public void saveComputer(MenuItem menuItem){
+    public void guardarComputadora(MenuItem menuItem){
         activo= findViewById(R.id.activo_computadora);
         marca=findViewById(R.id.marca_computadora);
         anio=findViewById(R.id.anio_computadora);
