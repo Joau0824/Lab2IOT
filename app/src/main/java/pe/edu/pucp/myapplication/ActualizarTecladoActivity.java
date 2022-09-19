@@ -9,11 +9,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActualizarTecladoActivity {
+import pe.edu.pucp.myapplication.entity.Computadora;
+import pe.edu.pucp.myapplication.entity.Teclado;
+import pe.edu.pucp.myapplication.entity.listaComputadoras;
+
+public class ActualizarTecladoActivity extends AppCompatActivity{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +36,7 @@ public class ActualizarTecladoActivity {
         valuesSpinner.add(0,"PC Activo:");
 
 
-        for (Computadora comp: ListaComputadoras.getListaComputadoras()){
+        for (Computadora comp: listaComputadoras.getListaComputadoras()){
             valuesSpinner.add(comp.getActivo());
         }
 
