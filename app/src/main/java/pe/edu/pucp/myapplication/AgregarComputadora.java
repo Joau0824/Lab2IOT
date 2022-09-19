@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -25,56 +26,67 @@ public class AgregarComputadora extends AppCompatActivity {
         setContentView(R.layout.activity_computadora_agregar);
         this.setTitle(R.string.titulo_agregar_computadora);
 
-        //spinner Marcas
-        String [] marcas={"Marca:","DELL","LG","SAMSUNG","ASUS","MAC","LENOVO","XIAOMI","REDMI","APPLE","IOS","OTRO"};
-        ArrayAdapter<String> adapterMarcas= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,marcas);
-        Spinner spinnerMarcas =findViewById(R.id.marca_computadora);
-        spinnerMarcas.setAdapter(adapterMarcas);
-
+        onResume();
     }
 
-    @Override
+    EditText activo;
+    Spinner marca;
+    EditText anho;
+    EditText CPU;
+
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_check_computadora,menu);
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+    public void agregarComputadora(MenuItem menuItem){
+        activo= findViewById(R.id.activo_computadora);
+        marca=findViewById(R.id.marca_computadora);
+        anho=findViewById(R.id.anio_computadora);
+        CPU=findViewById(R.id.cpu_computadora);
 
-        switch (item.getItemId()){
-            case R.id.check_computadora:
-                //Activo
-                EditText textoComputadora = findViewById(R.id.activo_computadora);
-                String textoComputadoraString = textoComputadora.getText().toString();
-                //Marca
-                Spinner spinnerMarcasComputadora =findViewById(R.id.marca_computadora);
-                String marca=spinnerMarcasComputadora.getSelectedItem().toString();
-                if (marca.equals("Marca:")){
-                    marca="";
-                }
+        String Stractivo=activo.getText().toString();
+        String Strmarca= marca.getSelectedItem().toString();
+        String Stranho=anho.getText().toString();
+        String Strcpu=CPU.getText().toString();
 
-                //Año
-                EditText TextoAnho = findViewById(R.id.anio_computadora);
-                String anho = TextoAnho.getText().toString();
+        boolean bandera = false;
 
-                //CPU
-                EditText TextoModelo = findViewById(R.id.cpu_computadora);
-                String cpu = TextoModelo.getText().toString();
-
-                //LISTA
-                Computadora formComputadora = new Computadora(textoComputadoraString,marca,anho,cpu);
-                listaComputadoras.agregarComputadora(formComputadora);
-
-
-                Intent intent = new Intent(this,ComputadoraActivity.class);
-                startActivity(intent);
-                break;
+        if(Stractivo.isEmpty()){
+            activo.setError("Ingrese activo");
+            bandera=false;
+        }else if(Strmarca.equals("Marca:")){
+            Toast.makeText(this, "Tiene que llenar todos los campos", Toast.LENGTH_SHORT).show();
+        }
+        else if(Stranho.isEmpty()){
+            anho.setError("Ingrese año");
+            bandera=false;
+        }else if(Integer.parseInt(Stranho)>2022 ||Integer.parseInt(Stranho)<1960 ){
+            anho.setError("Año no valido");
+            bandera=false;
+        }
+        else if(Strcpu.isEmpty()){
+            bandera=false;
+            CPU.setError("Ingrese CPU");
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();
+        }else{
+            bandera=true;
         }
 
-        return super.onOptionsItemSelected(item);
+        if(bandera){
+            Computadora computadora=new Computadora(Stractivo,(marca.getSelectedItemPosition()-1),Integer.parseInt(Stranho),Strcpu);
+            listaComputadoras.anadirComputadora(computadora);
+            finish();
+        }
+
+
     }
 
-
+    protected void onResume() {
+        String marcas[] = new String[]{
+                "MAC","LG", "SAMSUNG", "ASUS", "DELL","REDMI","ZETA", "HP", "Otro"
+        };
+        super.onResume();
+    }
 
 }

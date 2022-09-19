@@ -22,7 +22,7 @@ public class ReporteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporte);
 
-        if(listaComputadoras.getListaComputadoras().size() >0){
+        /*if(listaComputadoras.getListaComputadoras().size() >0){
             String cantidad_computadoras = "-Total: "+ listaComputadoras.getListaComputadoras().size();
 //            cantidad_computadoras+= "\n-Del año 2022: " + listaComputadoras.ret2022();
             ((TextView)findViewById(R.id.reporte_computadoras)).setText(cantidad_computadoras);
@@ -49,6 +49,6 @@ public class ReporteActivity extends AppCompatActivity {
         }else{
             TextView textView= findViewById(R.id.reporte_teclado);
             textView.setText("Teclados: No se registran teclados");
-        }
+        }*/
     }
 }

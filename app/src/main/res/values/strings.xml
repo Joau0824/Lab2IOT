@@ -7,6 +7,7 @@
     <string name="titulo_agregar_computadora">Nueva Computadora</string>
     <string name="titulo_actualizar_teclado">Actualizar teclado</string>
     <string-array name="listaMarcas">
+        <item>Seleccione una Marca</item>
         <item>DELL</item>
         <item>LG</item>
         <item>SAMSUNG</item>
@@ -17,7 +18,6 @@
         <item>REDMI</item>
         <item>APPLE</item>
         <item>IOS</item>
-        <item>Otro</item>
     </string-array>
 
 </resources>

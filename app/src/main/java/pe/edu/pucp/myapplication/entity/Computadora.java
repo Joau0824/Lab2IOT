@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class Computadora implements Serializable {
 
     private String activo;
-    private String marca;
-    private String anho;
+    private int marca;
+    private int anho;
     private String CPU;
 
-    public Computadora(String activo, String marca, String anho, String CPU) {
+    public Computadora(String activo, int marca, int anho, String CPU) {
         this.activo = activo;
         this.marca =marca;
         this.anho = anho;
         this.CPU = CPU;
     }
 
-    public String getAnho() {
+    public int getAnho() {
         return anho;
     }
 
-    public void setAnho(String anho) {
+    public void setAnho(int anho) {
         this.anho = anho;
     }
 
@@ -32,11 +32,11 @@ public class Computadora implements Serializable {
         this.activo = activo;
     }
 
-    public String getMarca() {
+    public int getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(int marca) {
         this.marca = marca;
     }
 

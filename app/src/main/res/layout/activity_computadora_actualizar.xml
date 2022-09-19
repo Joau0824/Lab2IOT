@@ -39,6 +39,7 @@
         android:layout_width="282dp"
         android:layout_height="26dp"
         android:layout_marginTop="36dp"
+        android:entries="@array/listaMarcas"
         app:layout_constraintStart_toStartOf="@+id/editText_activo_computadora"
         app:layout_constraintTop_toBottomOf="@+id/editText_activo_computadora" />
 
