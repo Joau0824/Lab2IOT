@@ -32,70 +32,64 @@ public class TecladoActualizar extends AppCompatActivity {
         setContentView(R.layout.activity_teclado_actualizar);
         this.setTitle(R.string.titulo_actualizar_teclado);
 
-
-        //teclado para obtener
-        Teclado teclado_actualiz=(Teclado) getIntent().getSerializableExtra("tecladoActualizar");
+        Teclado teclado_update=(Teclado) getIntent().getSerializableExtra("tecladoActualizar");
 
 
-        //spinner PC activos
-
-        List<String> valuesSpinner = new ArrayList<>();
-        valuesSpinner.add(0,"PC Activo:");
+        List<String> valuesSelect = new ArrayList<>();
+        valuesSelect.add(0,"PC Activo:");
 
 
         for (Computadora comp: listaComputadoras.getListaComputadoras()){
-            valuesSpinner.add(comp.getActivo());
+            valuesSelect.add(comp.getActivo());
         }
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,valuesSpinner);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,valuesSelect);
         Spinner spinner = findViewById(R.id.spinner_activo_actualizar_teclado);
         spinner.setAdapter(arrayAdapter);
 
 
-        //spinner Marcas
+        //select Marcas
         String [] marcas={"Marca:","Asus","Lenovo","Msi","Razer","Microsoft","Logitech","VSG"};
         ArrayAdapter<String> adapterMarcas= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,marcas);
-        Spinner spinnerMarcas =findViewById(R.id.spinner_marca_actualizar_teclado);
+        Spinner selectMarcas =findViewById(R.id.spinner_marca_actualizar_teclado);
 
-        spinnerMarcas.setAdapter(adapterMarcas);
+        selectMarcas.setAdapter(adapterMarcas);
 
-        //spinner Idioma
+        //select Idioma
         String [] idiomas={"Idioma:","Español Latam","Ingles","Frances","Italiano","Chino","Japones","Coreano"};
         ArrayAdapter<String> adapterIdioma= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,idiomas);
-        Spinner spinnerIdioma =findViewById(R.id.spinner_idioma_actualizar_teclado);
+        Spinner selectIdioma =findViewById(R.id.spinner_idioma_actualizar_teclado);
 
-        spinnerIdioma.setAdapter(adapterIdioma);
+        selectIdioma.setAdapter(adapterIdioma);
 
 
-        //Seleccion para PC activo
-
-        for (int i=0; i<valuesSpinner.size(); i++){
-            if(valuesSpinner.get(i).equals(teclado_actualiz.getActivo())){
-                spinnerMarcas.setSelection(i);
+        for (int i=0; i<valuesSelect.size(); i++){
+            if(valuesSelect.get(i).equals(teclado_update.getActivo())){
+                selectMarcas.setSelection(i);
             }
         }
 
 
         //Seleccion para marcas
         for (int i=0; i<marcas.length; i++){
-            if(marcas[i].equals(teclado_actualiz.getMarca())){
-                spinnerMarcas.setSelection(i);
+            if(marcas[i].equals(teclado_update.getMarca())){
+                selectMarcas.setSelection(i);
             }
         }
 
         //Seleccion para idioma
         for (int i=0; i<idiomas.length; i++){
-            if(idiomas[i].equals(teclado_actualiz.getIdioma())){
-                spinnerIdioma.setSelection(i);
+            if(idiomas[i].equals(teclado_update.getIdioma())){
+                selectIdioma.setSelection(i);
             }
         }
 
         EditText activo_tecl = findViewById(R.id.editText_activo_teclado);
-        activo_tecl.setText(teclado_actualiz.getActivo());
+        activo_tecl.setText(teclado_update.getActivo());
         EditText anio_tecl = findViewById(R.id.editText_anho_actualizar_teclado);
-        anio_tecl.setText(teclado_actualiz.getAnio());
+        anio_tecl.setText(teclado_update.getAnio());
         EditText modelo_tecl = findViewById(R.id.editText_modelo_actualizar_teclado);
-        modelo_tecl.setText(teclado_actualiz.getModelo());
+        modelo_tecl.setText(teclado_update.getModelo());
     }
 
     @Override
@@ -111,30 +105,26 @@ public class TecladoActualizar extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.check_actualizar_teclado:
 
-                //Log.d("msg", "botón alert presionado");
+                EditText text_activo_teclado = findViewById(R.id.editText_activo_teclado);
+                String textoStringActivo = text_activo_teclado.getText().toString();
 
-                //guardar la data del formulario(crear)
-                //obteniendo texto ingresado
-                EditText textoActivoTecl = findViewById(R.id.editText_activo_teclado);
-                String textoStringActivo = textoActivoTecl.getText().toString();
-                //obteniendo de la lista pcs
-                Spinner spinnerPcActivo =findViewById(R.id.spinner_activo_actualizar_teclado);
-                String pcactivo=spinnerPcActivo.getSelectedItem().toString();
-                if (pcactivo.equals("PC Activo:")){
-                    pcactivo="";
+                Spinner select_activoPC =findViewById(R.id.spinner_activo_actualizar_teclado);
+                String activoPC=select_activoPC.getSelectedItem().toString();
+                if (activoPC.equals("PC Activo:")){
+                    activoPC="";
                 }
 
                 //obteniendo de la lista marcas
-                Spinner spinnerMarcas =findViewById(R.id.spinner_marca_actualizar_teclado);
-                String marca=spinnerMarcas.getSelectedItem().toString();
+                Spinner selectMarcas =findViewById(R.id.spinner_marca_actualizar_teclado);
+                String marca=selectMarcas.getSelectedItem().toString();
                 if (marca.equals("Marca:")){
                     marca="";
                 }
 
 
                 //obteniendo de la lista idioma
-                Spinner spinnerIdioma =findViewById(R.id.spinner_idioma_actualizar_teclado);
-                String idioma=spinnerIdioma.getSelectedItem().toString();
+                Spinner selectIdioma =findViewById(R.id.spinner_idioma_actualizar_teclado);
+                String idioma=selectIdioma.getSelectedItem().toString();
                 if (idioma.equals("Idioma:")){
                     idioma="";
                 }
@@ -153,7 +143,7 @@ public class TecladoActualizar extends AppCompatActivity {
                 Teclado tecl=ListaTeclados.getListTeclados().get(position);
                 tecl.setAnio(anio);
                 tecl.setActivo(textoStringActivo);
-                tecl.setActivo(pcactivo);
+                tecl.setActivo(activoPC);
                 tecl.setIdioma(idioma);
                 tecl.setMarca(marca);
                 tecl.setModelo(modelo);
