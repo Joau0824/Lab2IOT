@@ -41,6 +41,7 @@ public class AgregarComputadora extends AppCompatActivity {
     }
 
     //VINCULAMOS EL MENU CON EL ACTIVITY
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_check_computadora,menu);
