@@ -18,6 +18,7 @@ public class AgregarComputadora extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_computadora);
+        this.setTitle(R.string.titulo_agregar_computadora);
 
         //spinner computadoras
         List<String> spinner = new ArrayList<>();

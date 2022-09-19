@@ -28,18 +28,44 @@
         <activity
             android:name=".TecladoActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".ComputadoraActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".MonitorActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".TecladoActualizar"
-            android:exported="false"></activity>
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".AgregarTecladoActivity"
+            android:exported="true"
+            android:parentActivityName=".TecladoActivity">
+
+        </activity>
+        <!--<activity
+            android:name=".AgregarComputadoraActivity"
+            android:exported="true"
+            android:parentActivityName=".ComputadoraActivity">
+
+        </activity>
+        <activity
+            android:name=".AgregarMonitorActivity"
+            android:exported="true"
+            android:parentActivityName=".MonitorActivity">
+
+        </activity>-->
     </application>
 
 </manifest>

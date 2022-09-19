@@ -3,4 +3,6 @@
     <string name="titulo_compu">Computadora</string>
     <string name="titulo_monitor">Monitor</string>
     <string name="titulo_teclado">Teclado</string>
+    <string name="titulo_agregar_teclado">Nuevo Teclado</string>
+    <string name="titulo_agregar_computadora">Nueva Computadora</string>
 </resources>
