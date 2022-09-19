@@ -41,11 +41,6 @@
 
         </activity>
         <activity
-            android:name=".TecladoActualizar"
-            android:exported="false">
-
-        </activity>
-        <activity
             android:name=".AgregarTecladoActivity"
             android:exported="true"
             android:parentActivityName=".TecladoActivity">

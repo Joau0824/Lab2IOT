@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.edu.pucp.myapplication.entity.Computadora;
+import pe.edu.pucp.myapplication.entity.ListaTeclados;
 import pe.edu.pucp.myapplication.entity.Teclado;
 import pe.edu.pucp.myapplication.entity.listaComputadoras;
 
@@ -23,7 +24,7 @@ public class ActualizarTecladoActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actualizar_teclado);
+        setContentView(R.layout.activity_teclado_agregar);
 
 
         //obtengo el teclado que quiero actualizar
@@ -41,21 +42,21 @@ public class ActualizarTecladoActivity extends AppCompatActivity{
         }
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,valuesSpinner);
-        Spinner spinner = findViewById(R.id.spinner_PC_Activ_Actualiz);
+        Spinner spinner = findViewById(R.id.activo_pc_teclado);
         spinner.setAdapter(arrayAdapter);
 
 
         //spinner Marcas
         String [] marcas={"Marca:","Asus","Lenovo","Msi","Razer","Microsoft","Logitech","VSG"};
         ArrayAdapter<String> adapterMarcas= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,marcas);
-        Spinner spinnerMarcas =findViewById(R.id.spinner_marca_actualiz);
+        Spinner spinnerMarcas =findViewById(R.id.marca_teclado);
 
         spinnerMarcas.setAdapter(adapterMarcas);
 
         //spinner Idioma
         String [] idiomas={"Idioma:","Español Latam","Ingles","Frances","Italiano","Chino","Japones","Coreano"};
         ArrayAdapter<String> adapterIdioma= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,idiomas);
-        Spinner spinnerIdioma =findViewById(R.id.spinner_idioma_actualiz);
+        Spinner spinnerIdioma =findViewById(R.id.idioma_teclado);
 
         spinnerIdioma.setAdapter(adapterIdioma);
 
@@ -83,17 +84,15 @@ public class ActualizarTecladoActivity extends AppCompatActivity{
             }
         }
 
-        EditText activo_tecl = findViewById(R.id.editText_activo_actualiz);
-        activo_tecl.setText(teclado_actualiz.getActivo());
-        EditText anio_tecl = findViewById(R.id.editText_Anio_Actualizad);
+        EditText anio_tecl = findViewById(R.id.anio_teclado);
         anio_tecl.setText(teclado_actualiz.getAnio());
-        EditText modelo_tecl = findViewById(R.id.editText_modelo_actualiz);
+        EditText modelo_tecl = findViewById(R.id.modelo_teclado);
         modelo_tecl.setText(teclado_actualiz.getModelo());
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.actualizar_teclado_menu,menu);
+        getMenuInflater().inflate(R.menu.menu_actualizar_teclado,menu);
         return true;
     }
 
@@ -108,17 +107,18 @@ public class ActualizarTecladoActivity extends AppCompatActivity{
 
                 //guardar la data del formulario(crear)
                 //obteniendo texto ingresado
-                EditText textoActivoTecl = findViewById(R.id.editText_activo_actualiz);
+                EditText textoActivoTecl = findViewById(R.id.activo_teclado);
                 String textoStringActivo = textoActivoTecl.getText().toString();
+
                 //obteniendo de la lista pcs
-                Spinner spinnerPcActivo =findViewById(R.id.spinner_PC_Activ_Actualiz);
+                Spinner spinnerPcActivo =findViewById(R.id.activo_pc_teclado);
                 String pcactivo=spinnerPcActivo.getSelectedItem().toString();
                 if (pcactivo.equals("PC Activo:")){
                     pcactivo="";
                 }
 
                 //obteniendo de la lista marcas
-                Spinner spinnerMarcas =findViewById(R.id.spinner_marca_actualiz);
+                Spinner spinnerMarcas =findViewById(R.id.marca_teclado);
                 String marca=spinnerMarcas.getSelectedItem().toString();
                 if (marca.equals("Marca:")){
                     marca="";
@@ -126,37 +126,37 @@ public class ActualizarTecladoActivity extends AppCompatActivity{
 
 
                 //obteniendo de la lista idioma
-                Spinner spinnerIdioma =findViewById(R.id.spinner_idioma_actualiz);
+                Spinner spinnerIdioma =findViewById(R.id.idioma_teclado);
                 String idioma=spinnerIdioma.getSelectedItem().toString();
                 if (idioma.equals("Idioma:")){
                     idioma="";
                 }
 
                 //obteniendo texto ingresado año
-                EditText editTextAnio = findViewById(R.id.editText_Anio_Actualizad);
+                EditText editTextAnio = findViewById(R.id.anio_teclado);
                 String anio = editTextAnio.getText().toString();
 
 
                 //obteniendo texto ingresado modelo
-                EditText editTextModelo = findViewById(R.id.editText_modelo_actualiz);
+                EditText editTextModelo = findViewById(R.id.modelo_teclado);
                 String modelo = editTextModelo.getText().toString();
 
                 //se actualiza en el objeto de la lista dinamica
 
-                Teclado tecl=ListaTeclados.getListTeclados().get(position);
+                Teclado tecl= ListaTeclados.getListTeclados().get(position);
                 tecl.setAnio(anio);
                 tecl.setActivo(textoStringActivo);
-                tecl.setPcactiv(pcactivo);
+                tecl.setActivoPC(pcactivo);
                 tecl.setIdioma(idioma);
                 tecl.setMarca(marca);
                 tecl.setModelo(modelo);
 
-                Intent intent = new Intent(this,ListarTecladosActivity.class);
+                Intent intent = new Intent(this,TecladoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_borrar_teclado:
-                ListaTeclados.deleteTeclado(ListaTeclados.getListTeclados().get(position));
-                Intent intent2 = new Intent(this,ListarTecladosActivity.class);
+                ListaTeclados.eliminarTeclado(ListaTeclados.getListTeclados().get(position));
+                Intent intent2 = new Intent(this,TecladoActivity.class);
                 startActivity(intent2);
                 return true;
         }
