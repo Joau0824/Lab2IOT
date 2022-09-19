@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/2022-2/1TEL05 AppsIoT/Lab2IOT/app/src/main/res/layout/activity_computadora_agregar.xml" value="0.1" />
+        <entry key="..\:/2022-2/1TEL05 AppsIoT/Lab2IOT/app/src/main/res/layout/activity_reporte.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Labtel/Downloads/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.33242753623188404" />
         <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="..\:/Users/Labtel/StudioProjects/Lab2IOT/app/src/main/res/layout/activity_reporte.xml" value="0.25" />
@@ -17,18 +19,19 @@
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/layout/activity_teclado_actualizar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menu_check_computadora.xml" value="0.365625" />
-        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menu_check_monitor.xml" value="0.365625" />
-        <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menu_check_teclado.xml" value="0.365625" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menucomputadora.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/menuteclado.xml" value="0.5" />
         <entry key="..\:/Users/Marsh/AndroidStudioProjects/Lab2IOT/app/src/main/res/menu/poptecla.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_computadora.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/layout/activity_computadora_agregar.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_lista_teclados.xml" value="0.21262458471760798" />
         <entry key="app/src/main/res/layout/activity_lista_teclados2.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_monitor_agregar.xml" value="0.21603260869565216" />
         <entry key="app/src/main/res/layout/activity_reporte.xml" value="0.14010416666666667" />
-        <entry key="app/src/main/res/layout/activity_teclado.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_teclado.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_teclado_actualizar.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/activity_teclado_agregar.xml" value="0.20606884057971014" />
         <entry key="app/src/main/res/menu/menucomputadora.xml" value="0.2271794871794872" />
         <entry key="app/src/main/res/menu/menuteclado.xml" value="0.2271794871794872" />
       </map>
