@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_computadora_actualizar">
+
+    <TextView
+        android:id="@+id/textview_computadora_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="304dp"
+        android:text="Computadora"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_activo_computadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Activo"
+        app:layout_constraintEnd_toEndOf="@+id/textview_computadora_actualizar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_computadora_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/textview_computadora_actualizar" />
+
+    <Spinner
+        android:id="@+id/spinner_marca_actualizar_computadora"
+        android:layout_width="282dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_activo_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/editText_activo_computadora" />
+
+
+    <EditText
+        android:id="@+id/editText_anho_actualizar_computadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Año"
+        app:layout_constraintStart_toStartOf="@+id/spinner_marca_actualizar_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_marca_actualizar_computadora" />
+
+    <EditText
+        android:id="@+id/editText_cpu_actualizar_computadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="CPU"
+        app:layout_constraintStart_toStartOf="@+id/editText_anho_actualizar_computadora"
+        app:layout_constraintTop_toBottomOf="@+id/editText_anho_actualizar_computadora" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ public class ReporteActivity extends AppCompatActivity {
 
         if(listaComputadoras.getListaComputadoras().size() >0){
             String cantidad_computadoras = "-Total: "+ listaComputadoras.getListaComputadoras().size();
-            cantidad_computadoras+= "\n-Del año 2022: " + listaComputadoras.ret2022();
+//            cantidad_computadoras+= "\n-Del año 2022: " + listaComputadoras.ret2022();
             ((TextView)findViewById(R.id.reporte_computadoras)).setText(cantidad_computadoras);
 
         }else{
