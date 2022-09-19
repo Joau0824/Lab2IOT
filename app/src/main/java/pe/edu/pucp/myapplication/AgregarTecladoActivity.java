@@ -15,16 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.edu.pucp.myapplication.entity.Computadora;
-import pe.edu.pucp.myapplication.entity.ListaTeclados;
-import pe.edu.pucp.myapplication.entity.Teclado;
-import pe.edu.pucp.myapplication.entity.listaComputadoras;
-
 public class AgregarTecladoActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teclado_agregar);
+        this.setTitle(R.string.titulo_agregar_teclado);
 
 
         //spinner PC activos
@@ -54,11 +51,8 @@ public class AgregarTecladoActivity extends AppCompatActivity{
         Spinner spinnerIdioma =findViewById(R.id.idioma_teclado);
         spinnerIdioma.setAdapter(adapterIdioma);
 
-
-
-
-
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
