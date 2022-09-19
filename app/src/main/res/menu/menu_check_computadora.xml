@@ -6,5 +6,6 @@
         android:id="@+id/check_computadora"
         android:icon="@drawable/ic_check"
         android:title="Item"
+        android:onClick="guardarComputadora"
         app:showAsAction="ifRoom" />
 </menu>
