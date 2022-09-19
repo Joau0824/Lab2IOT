@@ -14,9 +14,6 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".AgregarComputadora"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -54,13 +51,13 @@
             android:parentActivityName=".TecladoActivity">
 
         </activity>
-        <!--<activity
-            android:name=".AgregarComputadoraActivity"
+        <activity
+            android:name=".AgregarComputadora"
             android:exported="true"
             android:parentActivityName=".ComputadoraActivity">
 
         </activity>
-        <activity
+        <!--<activity
             android:name=".AgregarMonitorActivity"
             android:exported="true"
             android:parentActivityName=".MonitorActivity">
