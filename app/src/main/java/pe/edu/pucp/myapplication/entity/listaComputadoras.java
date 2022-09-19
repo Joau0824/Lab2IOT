@@ -14,7 +14,7 @@ public class listaComputadoras {
 
     public static void borrarComputadora(Computadora computadora){listaComputadoras.remove(computadora);}
 
-    public static int ret2022(){
+    /*public static int ret2022(){
         int j = 0;
         for(Computadora i : listaComputadoras){
             if(i.getAnho()==2022){
@@ -22,7 +22,7 @@ public class listaComputadoras {
             }
         }
         return j;
-    }
+    }*/
 
     public static ArrayList<String> buscarComputadora(String equipo){
         ArrayList<String> equipos = new ArrayList<>();

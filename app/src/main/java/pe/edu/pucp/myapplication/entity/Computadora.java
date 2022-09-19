@@ -6,21 +6,21 @@ public class Computadora implements Serializable {
 
     private String activo;
     private String marca;
-    private int anho;
+    private String anho;
     private String CPU;
 
-    public Computadora(String activo, String marca, int anho, String CPU) {
+    public Computadora(String activo, String marca, String anho, String CPU) {
         this.activo = activo;
-        this.marca = marca;
+        this.marca =marca;
         this.anho = anho;
         this.CPU = CPU;
     }
 
-    public int getAnho() {
+    public String getAnho() {
         return anho;
     }
 
-    public void setAnho(int anho) {
+    public void setAnho(String anho) {
         this.anho = anho;
     }
 

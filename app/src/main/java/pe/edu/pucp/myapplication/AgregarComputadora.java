@@ -1,5 +1,8 @@
 package pe.edu.pucp.myapplication;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,31 +19,19 @@ import pe.edu.pucp.myapplication.entity.listaComputadoras;
 
 public class AgregarComputadora extends AppCompatActivity {
 
-    EditText activo;
-    Spinner marca;
-    EditText anio;
-    EditText CPU;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computadora_agregar);
         this.setTitle(R.string.titulo_agregar_computadora);
 
-        //spinner computadoras
-        List<String> spinner = new ArrayList<>();
-        spinner.add(0,"Computadora Activo");
-
-        for(Computadora computadora: listaComputadoras.getListaComputadoras()){
-            spinner.add(computadora.getActivo());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,spinner);
-        Spinner spinner1;
+        //spinner Marcas
+        String [] marcas={"Marca:","DELL","LG","SAMSUNG","ASUS","MAC","LENOVO","XIAOMI","REDMI","APPLE","IOS","OTRO"};
+        ArrayAdapter<String> adapterMarcas= new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,marcas);
+        Spinner spinnerMarcas =findViewById(R.id.marca_computadora);
+        spinnerMarcas.setAdapter(adapterMarcas);
 
     }
-
-    //VINCULAMOS EL MENU CON EL ACTIVITY
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,35 +39,42 @@ public class AgregarComputadora extends AppCompatActivity {
         return true;
     }
 
-    //Guardar new computer
-    public void guardarComputadora(MenuItem menuItem){
-        activo= findViewById(R.id.activo_computadora);
-        marca=findViewById(R.id.marca_computadora);
-        anio=findViewById(R.id.anio_computadora);
-        CPU=findViewById(R.id.cpu_computadora);
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
 
-        String activoStr=activo.getText().toString();
-        String marcaStr= marca.getSelectedItem().toString();
-        String anhoStr=anio.getText().toString();
-        String cpuStr=CPU.getText().toString();
+        switch (item.getItemId()){
+            case R.id.check_computadora:
+                //Activo
+                EditText textoComputadora = findViewById(R.id.activo_computadora);
+                String textoComputadoraString = textoComputadora.getText().toString();
+                //Marca
+                Spinner spinnerMarcasComputadora =findViewById(R.id.marca_computadora);
+                String marca=spinnerMarcasComputadora.getSelectedItem().toString();
+                if (marca.equals("Marca:")){
+                    marca="";
+                }
 
-        boolean saveAble = false;
+                //Año
+                EditText TextoAnho = findViewById(R.id.anio_computadora);
+                String anho = TextoAnho.getText().toString();
 
-        if(activoStr.isEmpty()){
-            activo.setError("Ingrese activo");
-            saveAble=false;
-        }else if(anhoStr.isEmpty()){
-            anio.setError("Ingrese año");
-            saveAble=false;
-        }else if(cpuStr.isEmpty()){
-            saveAble=false;
-            CPU.setError("Ingrese CPU");
-            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();
-        }else{
-            saveAble=true;
+                //CPU
+                EditText TextoModelo = findViewById(R.id.cpu_computadora);
+                String cpu = TextoModelo.getText().toString();
+
+                //LISTA
+                Computadora formComputadora = new Computadora(textoComputadoraString,marca,anho,cpu);
+                listaComputadoras.agregarComputadora(formComputadora);
+
+
+                Intent intent = new Intent(this,ComputadoraActivity.class);
+                startActivity(intent);
+                break;
         }
 
+        return super.onOptionsItemSelected(item);
     }
+
 
 
 }
