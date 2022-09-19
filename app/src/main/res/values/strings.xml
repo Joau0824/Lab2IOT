@@ -5,6 +5,7 @@
     <string name="titulo_teclado">Teclado</string>
     <string name="titulo_agregar_teclado">Nuevo Teclado</string>
     <string name="titulo_agregar_computadora">Nueva Computadora</string>
+    <string name="titulo_actualizar_teclado">Actualizar teclado</string>
     <string-array name="listaMarcas">
         <item>DELL</item>
         <item>LG</item>

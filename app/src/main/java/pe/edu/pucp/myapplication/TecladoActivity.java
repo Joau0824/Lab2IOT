@@ -46,7 +46,7 @@ public class TecladoActivity extends AppCompatActivity {
             listviewtecl.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Toast.makeText(TecladoActivity.this, Integer.toString(position), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(TecladoActivity.this,ActualizarTecladoActivity.class);
+                    Intent intent = new Intent(TecladoActivity.this,TecladoActualizar.class);
                     intent.putExtra("tecladoActualizar",ListaTeclados.getListTeclados().get(position));
                     intent.putExtra("posicion",Integer.toString(position));
                     startActivity(intent);
@@ -87,7 +87,7 @@ public class TecladoActivity extends AppCompatActivity {
         PopupMenu popupMenu = new PopupMenu(this,view);
         popupMenu.getMenuInflater().inflate(R.menu.poptecla,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(menuItem1 -> {
-            switch (menuItem.getItemId()){
+            switch (menuItem1.getItemId()){
                 case R.id.pop_buscar_tecla:
                     Log.d("msg","Buscar");
                     //Pasamos a buscar un teclado
@@ -104,24 +104,26 @@ public class TecladoActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             String teclado_buscado = input.getText().toString();
-                            ArrayList<String> resultado_busqueda = ListaTeclados.searchTeclado(teclado_buscado);
+                            ArrayList<String> resultado_teclado = ListaTeclados.searchTeclado(teclado_buscado);
                             ListView list = findViewById(R.id.lista_teclado);
-                            ArrayAdapter<String> array = new ArrayAdapter<String>(TecladoActivity.this, android.R.layout.simple_list_item_1,resultado_busqueda);
+                            ArrayAdapter<String> array = new ArrayAdapter<String>(TecladoActivity.this, android.R.layout.simple_list_item_1,resultado_teclado);
                             list.setAdapter(array);
 
-                            if(!resultado_busqueda.isEmpty()){
+                            if(!resultado_teclado.isEmpty()){
+                                System.out.println("vacio");
                                 ((TextView) findViewById(R.id.msg_teclado)).setText("");
                                 ((TextView) findViewById(R.id.msg_teclado)).setTextSize(0);
 
-                                Integer posic=ListaTeclados.obtenerActivo(teclado_buscado);
-                                if(posic!=null){
-                                    //Actualizado con click
+                                Integer posicion=ListaTeclados.obtenerActivo(teclado_buscado);
+                                if(posicion!=null){
+                                    System.out.println("lleno");
+                                    //Refresh
                                     list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                            Toast.makeText(TecladoActivity.this, Integer.toString(posic), Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(TecladoActivity.this,ActualizarTecladoActivity.class);
-                                            intent.putExtra("tecladoActualizar",ListaTeclados.getListTeclados().get(posic));
-                                            intent.putExtra("posicion",Integer.toString(posic));
+                                            Toast.makeText(TecladoActivity.this, Integer.toString(posicion), Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(TecladoActivity.this,TecladoActualizar.class);
+                                            intent.putExtra("tecladoActualizar",ListaTeclados.getListTeclados().get(posicion));
+                                            intent.putExtra("posicion",Integer.toString(posicion));
                                             startActivity(intent);
                                         }
                                     });
@@ -131,6 +133,7 @@ public class TecladoActivity extends AppCompatActivity {
 
 
                             }else{
+                                System.out.println("pipi");
                                 ((TextView) findViewById(R.id.msg_teclado)).setText("No existe el equipo con activo: "+teclado_buscado);
                                 ((TextView) findViewById(R.id.msg_teclado)).setTextSize(27);
                             }
@@ -145,6 +148,8 @@ public class TecladoActivity extends AppCompatActivity {
 
                     alertDialog.show();
                     return true;
+
+
                 case R.id.pop_todo_tecla:
                     Log.d("msg","Todo");
                     //Mostramos todas las opciones que tenemos disponibles
@@ -160,7 +165,7 @@ public class TecladoActivity extends AppCompatActivity {
                         listviewtecl.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 Toast.makeText(TecladoActivity.this, Integer.toString(position), Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(TecladoActivity.this,ActualizarTecladoActivity.class);
+                                Intent intent = new Intent(TecladoActivity.this,TecladoActualizar.class);
                                 intent.putExtra("tecladoActualizar",ListaTeclados.getListTeclados().get(position));
                                 intent.putExtra("posicion",Integer.toString(position));
                                 startActivity(intent);
@@ -172,6 +177,7 @@ public class TecladoActivity extends AppCompatActivity {
                         ((TextView) findViewById(R.id.msg_teclado)).setTextSize(27);
                     }
                     return true;
+
                 default:
                     return false;
 

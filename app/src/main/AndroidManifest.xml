@@ -42,7 +42,8 @@
         </activity>
         <activity
             android:name=".TecladoActualizar"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".TecladoActivity">
 
         </activity>
         <activity
@@ -57,12 +58,6 @@
             android:parentActivityName=".ComputadoraActivity">
 
         </activity>
-        <!--<activity
-            android:name=".AgregarMonitorActivity"
-            android:exported="true"
-            android:parentActivityName=".MonitorActivity">
-
-        </activity>-->
     </application>
 
 </manifest>
