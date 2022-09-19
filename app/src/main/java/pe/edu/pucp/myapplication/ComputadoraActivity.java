@@ -1,21 +1,57 @@
 package pe.edu.pucp.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
+import pe.edu.pucp.myapplication.entity.Computadora;
+import pe.edu.pucp.myapplication.entity.listaComputadoras;
+
 public class ComputadoraActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computadora);
+
+        //boton plus computadora
+
+        FloatingActionButton button =findViewById(R.id.plus_computadora);
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent(this,AgregarComputadora.class);
+            startActivity(intent);
+        });
+
+        //listarComputadoras
+        if(!listaComputadoras.getListaComputadoras().isEmpty()){
+            ((TextView) findViewById(R.id.msgComputadora)).setText("");
+            ((TextView) findViewById(R.id.msgComputadora)).setTextSize(0);
+
+            ListView listView = findViewById(R.id.listaComputadoras);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listaComputadoras.componentesComputadora());
+            listView.setAdapter(adapter);
+        }else{
+            ((TextView) findViewById(R.id.msgComputadora)).setText("No hay computadoras ingresadas");
+        }
+
+
+
     }
 
     @Override
@@ -48,5 +84,7 @@ public class ComputadoraActivity extends AppCompatActivity {
         popupMenu.show();
 
     }
+
+
 
 }

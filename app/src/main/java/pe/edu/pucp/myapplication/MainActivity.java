@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void irComputadora(View view){
-        Intent intent = new Intent(this, MonitorActivity.class);
+        Intent intent = new Intent(this, ComputadoraActivity.class);
         startActivity(intent);
     }
 

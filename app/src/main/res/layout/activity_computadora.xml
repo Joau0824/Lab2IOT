@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".activity_computadora">
 
+    <TextView
+        android:id="@+id/msgComputadora"
+        android:layout_width="317dp"
+        android:layout_height="78dp"
+        android:text="No hay computadoras ingresadas"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollComputadoras"
+        app:layout_constraintEnd_toEndOf="@+id/scrollComputadoras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollComputadoras" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/plus_computadora"
         android:layout_width="wrap_content"
@@ -20,4 +32,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollComputadoras"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/verticalComputadoras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaComputadoras"
+                android:layout_width="429dp"
+                android:layout_height="745dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
