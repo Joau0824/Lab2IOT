@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/activo_computadora"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -29,18 +29,19 @@
         app:layout_constraintStart_toStartOf="@+id/titulo_computadora_agregar"
         app:layout_constraintTop_toBottomOf="@+id/titulo_computadora_agregar" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <Spinner
         android:id="@+id/marca_computadora"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:entries="@array/listaMarcas"
         android:hint="Marca"
         app:layout_constraintEnd_toEndOf="@+id/activo_computadora"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/activo_computadora"
         app:layout_constraintTop_toBottomOf="@+id/activo_computadora" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/anio_computadora"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -51,8 +52,8 @@
         app:layout_constraintStart_toStartOf="@+id/marca_computadora"
         app:layout_constraintTop_toBottomOf="@+id/marca_computadora" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/modelo_computadora"
+    <EditText
+        android:id="@+id/cpu_computadora"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"

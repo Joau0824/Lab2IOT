@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/activo_teclado"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="@+id/titulo_teclado_agregar"
         app:layout_constraintTop_toBottomOf="@+id/titulo_teclado_agregar" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <Spinner
         android:id="@+id/activo_pc"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -38,9 +38,10 @@
         app:layout_constraintEnd_toEndOf="@+id/activo_teclado"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activo_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/activo_teclado" />
+        app:layout_constraintTop_toBottomOf="@+id/activo_teclado" >
+    </Spinner>
 
-    <com.google.android.material.textfield.TextInputEditText
+    <Spinner
         android:id="@+id/marca_teclado"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -49,9 +50,10 @@
         app:layout_constraintEnd_toEndOf="@+id/activo_pc"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activo_pc"
-        app:layout_constraintTop_toBottomOf="@+id/activo_pc" />
+        app:layout_constraintTop_toBottomOf="@+id/activo_pc" >
+    </Spinner>
 
-    <com.google.android.material.textfield.TextInputEditText
+    <Spinner
         android:id="@+id/idioma_teclado"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -60,9 +62,10 @@
         app:layout_constraintEnd_toEndOf="@+id/marca_teclado"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/marca_teclado"
-        app:layout_constraintTop_toBottomOf="@+id/marca_teclado" />
+        app:layout_constraintTop_toBottomOf="@+id/marca_teclado" >
+    </Spinner>
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/anio_teclado"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -73,7 +76,7 @@
         app:layout_constraintStart_toStartOf="@+id/idioma_teclado"
         app:layout_constraintTop_toBottomOf="@+id/idioma_teclado" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/modelo_teclado"
         android:layout_width="325dp"
         android:layout_height="45dp"
