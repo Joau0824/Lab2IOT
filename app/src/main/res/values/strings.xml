@@ -5,4 +5,18 @@
     <string name="titulo_teclado">Teclado</string>
     <string name="titulo_agregar_teclado">Nuevo Teclado</string>
     <string name="titulo_agregar_computadora">Nueva Computadora</string>
+    <string-array name="listaMarcas">
+        <item>DELL</item>
+        <item>LG</item>
+        <item>SAMSUNG</item>
+        <item>ASUS</item>
+        <item>MAC</item>
+        <item>LENOVO</item>
+        <item>XIAOMI</item>
+        <item>REDMI</item>
+        <item>APPLE</item>
+        <item>IOS</item>
+        <item>Otro</item>
+    </string-array>
+
 </resources>

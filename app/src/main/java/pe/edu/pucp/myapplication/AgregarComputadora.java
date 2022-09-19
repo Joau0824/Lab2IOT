@@ -1,8 +1,5 @@
 package pe.edu.pucp.myapplication;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +24,7 @@ public class AgregarComputadora extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_computadora);
+        setContentView(R.layout.activity_computadora_agregar);
         this.setTitle(R.string.titulo_agregar_computadora);
 
         //spinner computadoras
@@ -77,15 +74,6 @@ public class AgregarComputadora extends AppCompatActivity {
         }else{
             saveAble=true;
         }
-
-        if(saveAble){
-            Computadora computadora=new Computadora(activoStr,marca.getSelectedItemPosition(),Integer.parseInt(anhoStr),cpuStr);
-            listaComputadoras.agregarComputadora(computadora);
-
-            Intent intent=new Intent(this,ComputadoraActivity.class);
-            startActivity(intent);
-        }
-
 
     }
 
