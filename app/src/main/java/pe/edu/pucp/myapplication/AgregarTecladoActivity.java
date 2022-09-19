@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.edu.pucp.myapplication.entity.Computadora;
+import pe.edu.pucp.myapplication.entity.ListaTeclados;
+import pe.edu.pucp.myapplication.entity.Teclado;
+import pe.edu.pucp.myapplication.entity.listaComputadoras;
+
 public class AgregarTecladoActivity extends AppCompatActivity{
 
     @Override
