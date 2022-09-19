@@ -48,7 +48,7 @@ public class AgregarComputadora extends AppCompatActivity {
     }
 
     //Guardar new computer
-    public void saveComputer(MenuItem menuItem){
+    public void guardarComputadora(MenuItem menuItem){
         activo= findViewById(R.id.activo_computadora);
         marca=findViewById(R.id.marca_computadora);
         anio=findViewById(R.id.anio_computadora);

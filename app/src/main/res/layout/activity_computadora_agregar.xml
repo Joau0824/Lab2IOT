@@ -34,6 +34,7 @@
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:entries="@array/listaMarcas"
         android:hint="Marca"
         app:layout_constraintEnd_toEndOf="@+id/activo_computadora"
         app:layout_constraintHorizontal_bias="1.0"
